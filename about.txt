@@ -1,0 +1,33 @@
+Project Name: Student Portfolio
+
+Project Description:
+Student Portfolio is a personal portfolio website project created to showcase my academic background, technical skills, interests, and online presence as a B.Tech CSE (AI/ML) student.
+
+This project includes:
+- index.html for displaying personal information in a structured format
+- about.txt for describing the project
+- chart.py for generating a simple chart using Python
+- chart.png as the output image of the chart
+- README.md for project documentation
+
+Purpose of the Project:
+The main purpose of this project is to build a simple but professional portfolio that represents me as a student, aspiring AI & Machine Learning Engineer, and content creator. It helps demonstrate my HTML, CSS, and Python skills in a clean and organized way.
+
+Technologies Used:
+- HTML
+- CSS
+- Python
+- Git and GitHub
+
+Highlights:
+- Clean and responsive portfolio layout
+- Personal and professional introduction
+- Social links for LinkedIn and Instagram
+- Simple Python chart generation
+- Beginner-friendly project structure
+
+Learning Outcome:
+Through this project, I learned how to structure a portfolio website, style it using CSS, generate a chart with Python, and manage files using GitHub.
+
+Author:
+Anand Kumar

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anand Kumar's student portfolio - B.Tech CSE (AI/ML), aspiring AI engineer, developer, and content creator." />
+  <title>Anand Kumar | Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent2: #22c55e;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #020617, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      background: #ffffff;
+      color: #000000;
+      padding: 10px 14px;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 24px;
+      background:
+        linear-gradient(rgba(2, 6, 23, 0.4), rgba(2, 6, 23, 0.9)),
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.20), transparent 35%);
+    }
+
+    .navbar {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 0;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 0 80px;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: var(--accent2);
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: 0 auto 32px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #001018;
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn.secondary {
+      border-color: var(--border);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn.secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: -40px auto 0;
+      padding: 0 24px 60px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(17, 24, 39, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    }
+    .project h3 {
+    }
+      text-align: center;
+
+    .social-links {
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .social-links a {
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #e5e7eb;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #38bdf8;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-bottom: 60px;
+      }
+
+      .hero-content {
+        padding-top: 20px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="hero">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="logo">Anand Kumar</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#learning">Learning</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="subtitle">B.Tech CSE (AI/ML) | Aspiring AI Engineer | Tech Enthusiast</p>
+      <h1>Building smart, human-centered solutions with AI and data.</h1>
+      <p class="hero-text">
+        I’m Anand Kumar, a student passionate about Artificial Intelligence, Machine Learning,
+        data analytics, and creative content creation through “Unfiltered Vibes with Anand.”
+      </p>
+      <div class="hero-buttons">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Anand Kumar, currently pursuing my B.Tech in Computer Science and Engineering (AI & ML).
+        I enjoy exploring how Artificial Intelligence and data-driven systems can create smarter and more meaningful solutions.
+      </p>
+      <p>
+        Along with my studies, I run a YouTube channel called <strong>Unfiltered Vibes with Anand</strong>,
+        where I share authentic stories about college life, learning, and personal growth.
+      </p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="tags">
+        <span>Python</span>
+        <span>C Programming</span>
+        <span>C++</span>
+        <span>AI & Machine Learning</span>
+        <span>Data Analytics</span>
+        <span>Predictive Modeling</span>
+        <span>Content Creation</span>
+        <span>Personal Branding</span>
+      </div>
+    </section>
+
+    <section id="learning" class="card">
+      <h2>Currently Learning</h2>
+      <ul class="list">
+        <li>TensorFlow and PyTorch for deep learning models</li>
+        <li>SPSS Modeler for predictive analytics</li>
+        <li>IBM Cognos Analytics</li>
+        <li>C++ for efficient AI algorithms</li>
+        <li>Practical Python data projects</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="project">
+          <h3>Student Portfolio</h3>
+          <p>A simple portfolio project built using HTML, CSS, Python, and documentation files.</p>
+        </article>
+        <article class="project">
+          <h3>Unfiltered Vibes with Anand</h3>
+          <p>A content platform where I share stories on college life, tech learning, and personal growth.</p>
+        </article>
+        <article class="project">
+          <h3>AI Mood Recommender</h3>
+          <p>A Python-based chatbot concept that recommends movies based on mood.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Goals</h2>
+      <p>
+        My long-term goal is to grow into an AI Engineer and Data Innovator,
+        using technology and creativity to build ethical and impactful solutions.
+      </p>
+    </section>
+
+    <section id="contact" class="card contact">
+      <h2>Contact</h2>
+      <p>Open to AI/ML collaborations, internships, mentorship, and content creation opportunities.</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/anand-kumar-819798320" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/anand_2006hazaribag/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Anand Kumar. All rights reserved.</p>
+  </footer>
+</body>
+</html>      border-color: #38bdf8;
+      border-radius: 999px;
+      gap: 12px;
+      justify-content: center;
+      display: flex;
+    }
+    .contact {
+
+      margin-bottom: 10px;
+
+      border-radius: 16px;
+      padding: 20px;
+    .card h2 {
+    .project {
+      border: 1px solid var(--border);
+      background: var(--card2);
+    }
+
+      font-size: 1.6rem;
+      gap: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-bottom: 16px;
+    }
+    .grid {
+    }
+
+    .list {
+      gap: 10px;
+      padding-left: 20px;
+      display: grid;
+      font-size: 0.95rem;
+
+    }
+      background: var(--card2);
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+
+
+    .tags span {
+      gap: 12px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+    .card p,
+    .list li {
+
